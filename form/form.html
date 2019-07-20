@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+
+<html lang="en-US">
+ 
+
+<head>
+
+
+<meta charset="utf-8" /> 
+
+
+<title>Contact Us or Schedule an Appointment</title>
+
+
+<script>
+function validateForm() {
+  var x = document.forms["myForm"]["first_name"].value;
+  if (x == "") {
+    alert("Name must be filled out");
+    return false;
+  }
+}
+
+ $(document).ready(function () {
+    $('check1').on('keypress', function (event) {
+        if (event.which === 13) {
+	event.preventDefault();
+            this.checked = !this.checked;
+        }
+
+    });
+});
+</script>
+
+</head>
+
+
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+<link type="text/css" href="form.css" rel="stylesheet" />
+
+
+<style>
+
+
+/* these styles are just for this demo *
+/* remove and drop the form element into your container */
+
+
+body {
+	
+font-family:serif, sans-serif;
+
+background:#C7BDFF;
+	
+/* Firefox (10.0.2) styles textarea in Courier by default and does not inherit font-family from body */
+	}
+
+
+a#toggleLeftLabels, a#hiliteErrors 
+{
+	color:#555;
+	font-size:.8em;
+	margin-left:.5em;
+	}
+
+</style>
+
+
+
+
+
+<body>
+    
+<div id="wrapper">  
+<!-- temp - for this demo only - use your container -->
+    
+    
+<!--FORM WIITH LABELS ABOVE OR TO LEFT OF CONTROLS-->
+      
+
+<form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post"> 
+<!-- the required form tag -->
+        
+<h3>Financial Services LLC</h3>
+        
+<!--START OF FORM ELEMENTS-->
+        
+<!-- A SINGLE LINE TEXT FIELD -->
+	
+        
+<fieldset> <!-- the container for a group of controls -->
+        
+
+<legend><span>Contact Information</span></legend> 
+
+<!-- the title for a fieldset -->
+        
+
+<section> <!-- control, label and direction wrapper for styling -->
+            
+
+<p class="note">* indicates required field</p>
+  
+
+<p><strong>Please enter your information</strong></p>
+       
+
+<label for="first_name">First Name<span>*</span>:</label> 
+
+<!-- the for attribute ties the label to its control - same as contol's ID -->
+ 
+           
+<input type="text" class="entry" id="First Name" name="first_name" />  
+
+<label for="last_name">Last Name<span>*</span>:</label> 
+
+<!-- the for attribute ties the label to its control - same as contol's ID -->
+            
+
+<input type="text" class="entry" id="Last Name" name="last_name" />
+
+<label for="phone_number">Phone Number<span>*</span>:</label> 
+
+<!-- the for attribute ties the label to its control - same as contol's ID -->
+            
+
+<input type="text" class="entry" id="Phone Number" name="phone_number" />
+
+<label for="email_address">Email Address<span>*</span>:</label> 
+
+<!-- the for attribute ties the label to its control - same as contol's ID -->
+ 
+           
+<input type="text" id="Email Address" name="email_address" />
+
+<!-- the text attribute makes this input display as a text field -->
+  
+            
+    
+</section>
+
+        
+<!-- END SINGLE LINE TEXT FIELD -->
+       
+             
+
+<!-- A HTML5 DATE FIELD -->
+        
+       
+<legend><p><span>Appointment Request Information:</span></p></legend>
+        
+
+<!-- CHECKBOXES -->
+       
+
+<section>
+            
+
+<h4>Days you are available for an appointment:
+
+</h4>
+            
+
+<p>Please choose one or more</p>
+     
+
+<section>
+                    
+<input type="checkbox" id="check1" name="checkset" value="1" />
+
+<label for="check1">Monday</label>
+                
+</section>
+                             
+
+<section>
+                   
+<input type="checkbox"  id="check2" name="checkset" value="2" />
+                   
+<label for="check2">Tuesday</label>
+                
+</section>
+        
+
+<section>
+                   
+<input type="checkbox"  id="check3" name="checkset" value="3" />
+                   
+<label for="check3">Wednesday</label>
+                
+</section>
+ 
+
+<section>
+                   
+<input type="checkbox"  id="check4" name="checkset" value="4" />
+                   
+<label for="check4">Thursday</label>
+                
+</section>
+ 
+
+<section>
+                   
+<input type="checkbox"  id="check5" name="checkset" value="5" />
+                   
+<label for="check5">Friday</label>
+                
+</section>
+ 
+
+<section>
+                   
+<input type="checkbox"  id="check6" name="checkset" value="6" />
+                   
+<label for="check6">Saturday</label>
+                
+</section>
+ 
+
+<section>
+                   
+<input type="checkbox"  id="check6" name="checkset" value="6" />
+                   
+<label for="check6">Any Day</label>
+                
+</section>
+ 
+	       
+</section>
+        
+
+<!-- END CHECKBOXES -->
+   
+
+<!-- A MULTI-LINE TEXT FIELD -->
+        
+<section>	
+            
+
+<label for="comment">Question or Comment:</label>
+            
+<textarea id="description" name="description" placeholder="Enter the description here."></textarea>
+     
+</section>
+        
+
+
+<div style="clear:both; padding:20px 0 0 0; font-size:.85em; color:#666;">
+
+<input type="submit" id="myBtn" value="Submit">
+</form>    
+
+</div>
+ 
+   
+
+</body>
+
+
+</html>
